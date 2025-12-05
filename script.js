@@ -216,8 +216,9 @@ const initialDecks = [
         ]
     },
     {
-        title: "Verbos",
-        icon: "🅰️",
+        // CAMBIO: Categoría combinada de Verbos y Phrasal Verbs
+        title: "Verbos y Phrasal Verbs", 
+        icon: "🗣️", // Ícono cambiado a 🗣️ para representar más el habla/acción
         cards: [
             // ----------------------------------------------------
             // 200 VERBOS IMPRESCINDIBLES NIVEL B2
@@ -398,61 +399,6 @@ const initialDecks = [
             { front: "To surmount", back: "Superar / Vencer", example: "She surmounted all the obstacles in her path." },
             { front: "To tantalize", back: "Atraer / Tentador", example: "The delicious smell tantalized the hungry children." },
             { front: "To transgress", back: "Transgredir / Violar", example: "He knowingly transgressed the rules." },
-            { front: "To undermine", back: "Socavar / Debilitar", example: "Criticism can undermine a person's confidence." },
-            { front: "To uphold", back: "Mantener / Apoyar", example: "We must uphold the principles of democracy." },
-            { front: "To vouch (for)", back: "Responder (por alguien)", example: "I can vouch for his honesty and integrity." },
-            { front: "To withstand", back: "Resistir / Aguantar", example: "The bridge was built to withstand strong winds." },
-            { front: "To abstain", back: "Abstenerse", example: "Employees must abstain from smoking inside the building." },
-            { front: "To acknowledge", back: "Reconocer / Admitir", example: "He acknowledged his mistake publicly." },
-            { front: "To allot", back: "Asignar / Repartir", example: "Each student was allotted a space for their project." },
-            { front: "To articulate", back: "Articular / Expresar", example: "She struggled to articulate her feelings." },
-            { front: "To baffle", back: "Desconcertar / Dejar perplejo", example: "The puzzle baffled even the experts." },
-            { front: "To befall", back: "Suceder / Acontecer", example: "We hope no harm will befall them." },
-            { front: "To circumvent", back: "Evadir / Eludir", example: "They tried to circumvent the rules." },
-            { front: "To coerce", back: "Coaccionar / Forzar", example: "He was coerced into signing the confession." },
-            { front: "To concur", back: "Estar de acuerdo / Coincidir", example: "The committee members concurred on the decision." },
-            { front: "To condense", back: "Condensar / Resumir", example: "Please condense the report to one page." },
-            { front: "To confide", back: "Confiar / Confesar", example: "She confided her secret to her best friend." },
-            { front: "To contrive", back: "Ideárselas / Maquinar", example: "They contrived a clever escape plan." },
-            { front: "To curb", back: "Frenar / Refrenar", example: "The government is trying to curb inflation." },
-            { front: "To denote", back: "Denotar / Indicar", example: "The colour red often denotes danger." },
-            { front: "To digress", back: "Divagar / Desviarse", example: "The speaker often digressed from the main topic." },
-            { front: "To discern", back: "Discernir / Distinguir", example: "It is hard to discern the truth from the lies." },
-            { front: "To dwindle", back: "Disminuir / Reducirse", example: "The population has been dwindling rapidly." },
-            { front: "To elicit", back: "Suscitar / Provocar", example: "The survey elicited positive responses." },
-            { front: "To elapse", back: "Transcurrir / Pasar (tiempo)", example: "A few hours elapsed before the rescue team arrived." },
-            { front: "To embolden", back: "Envalentonar / Animar", example: "His success emboldened him to take more risks." },
-            { front: "To emanate", back: "Emanar / Proceder de", example: "A strange light emanated from the window." },
-            { front: "To exempt", back: "Eximir / Excluir", example: "Students were exempted from the final exam." },
-            { front: "To exhort", back: "Exhortar / Incitar", example: "The leader exhorted the people to unity." },
-            { front: "To forbear", back: "Abstenerse / Contenerse", example: "Please forbear from making loud noises." },
-            { front: "To forge", back: "Forjar / Falsificar", example: "They worked hard to forge a new partnership." },
-            { front: "To haphazard", back: "Hacer al azar", example: "The decisions were made in a haphazard manner." },
-            { front: "To impede", back: "Impedir / Dificultar", example: "Bureaucracy often impedes progress." },
-            { front: "To incur", back: "Incurrir / Contraer (deuda)", example: "The company incurred huge losses." },
-            { front: "To infiltrate", back: "Infiltrarse", example: "The spy managed to infiltrate the enemy camp." },
-            { front: "To instill", back: "Inculcar / Infundir", example: "Parents try to instill good values in their children." },
-            { front: "To intervene", back: "Intervenir", example: "The police had to intervene to stop the fight." },
-            { front: "To laud", back: "Alabar / Elogiar", example: "He was lauded for his bravery." },
-            { front: "To mitigate", back: "Mitigar / Suavizar", example: "They implemented measures to mitigate the risk." },
-            { front: "To obscure", back: "Oscurecer / Ocultar", example: "The heavy fog obscured the view." },
-            { front: "To oscillate", back: "Oscilar / Vacilar", example: "His mood oscillates between joy and sadness." },
-            { front: "To paraphrase", back: "Parafrasear", example: "Please paraphrase the main argument of the text." },
-            { front: "To plummet", back: "Desplomarse / Caer en picado", example: "Stock prices plummeted after the news." },
-            { front: "To precede", back: "Preceder / Anteceder", example: "The dark clouds preceded the storm." },
-            { front: "To procure", back: "Procurar / Conseguir", example: "We need to procure funding for the expedition." },
-            { front: "To propagate", back: "Propagar / Difundir", example: "The virus propagates rapidly in crowded areas." },
-            { front: "To reimburse", back: "Reembolsar", example: "The company reimbursed him for his travel expenses." },
-            { front: "To reprimand", back: "Reprender / Regañar", example: "The employee was reprimanded for being late." },
-            { front: "To resuscitate", back: "Resucitar / Reanimar", example: "Paramedics tried to resuscitate the patient." },
-            { front: "To sanction", back: "Sancionar / Autorizar", example: "The UN sanctioned trade against the rogue nation." },
-            { front: "To sprawl", back: "Extenderse / Desparramarse", example: "The city sprawls out into the valley." },
-            { front: "To stipulate", back: "Estipular / Especificar", example: "The contract stipulates the terms of the agreement." },
-            { front: "To substantiate", back: "Justificar / Demostrar", example: "You must substantiate your claims with evidence." },
-            { front: "To supplant", back: "Suplantar / Reemplazar", example: "Technology supplanted traditional methods." },
-            { front: "To surmount", back: "Superar / Vencer", example: "She surmounted all the obstacles in her path." },
-            { front: "To tantalize", back: "Atraer / Tentador", example: "The delicious smell tantalized the hungry children." },
-            { front: "To transgress", back: "Transgredir / Violar", example: "He knowingly transgressed the rules." },
             { front: "To traverse", back: "Atravesar / Recorrer", example: "They traversed the entire mountain range." },
             { front: "To tout", back: "Preconizar / Promocionar", example: "The critics touted the film as a masterpiece." },
             { front: "To unearth", back: "Desenterrar / Descubrir", example: "Archaeologists unearthed an ancient civilization." },
@@ -505,15 +451,10 @@ const initialDecks = [
             { front: "To warrant", back: "Garantizar / Justificar", example: "The situation warrants immediate attention." },
             { front: "To wane", back: "Menguar / Disminuir", example: "His enthusiasm for the project began to wane." },
             { front: "To wreak", back: "Causar / Provocar (daño)", example: "The storm wreaked havoc on the coast." },
-            { front: "To wreak", back: "Causar / Provocar (daño)", example: "The storm wreaked havoc on the coast." } // Total 200 Verbos B2
-        ]
-    },
-    {
-        title: "Phrasal Verbs",
-        icon: "🗣️",
-        cards: [
+            { front: "To wreak", back: "Causar / Provocar (daño)", example: "The storm wreaked havoc on the coast." }, // Total 200 Verbos B2
+            
             // ----------------------------------------------------
-            // 20 PHRASAL VERBS COMUNES B2
+            // 20 PHRASAL VERBS COMUNES (MOVIDOS AQUÍ)
             // ----------------------------------------------------
             { front: "To break down", back: "Averiarse / Derribar / Desglosar", example: "The negotiation broke down over a small detail." },
             { front: "To call off", back: "Cancelar", example: "They had to call off the football match due to heavy rain." },
@@ -687,7 +628,6 @@ const initialDecks = [
             },
         ]
     },
-    // --- FIN CATEGORÍA QUIZ ---
     {
         title: "Animales",
         icon: "🦁",
