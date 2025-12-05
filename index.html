@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptis B2 Master Flashcards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Aptis B2 Master</h1>
+                <p id="app-subtitle">Selecciona una categoría para empezar</p>
+            </div>
+            
+            <div class="controls">
+                <button id="btn-language-toggle">Frente: 🇬🇧 Inglés</button>
+            </div>
+        </header>
+
+        <section id="dashboard">
+            <h2>Categorías de Vocabulario</h2>
+            <div id="decks-container" class="grid-container">
+                </div>
+        </section>
+
+        <section id="study-mode" class="hidden">
+            <h2 id="current-deck-title"></h2>
+
+            <div id="tracking-status-bar">
+                </div>
+            
+            <div id="flashcard-area">
+                <div id="flashcard" onclick="flipCard()">
+                    <div class="card-face card-front">
+                        <h3><span id="card-front-text"></span></h3>
+                        </div>
+                    <div class="card-face card-back">
+                        <h3><span id="card-back-text"></span></h3>
+                        <p id="card-example-text"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="navigation-controls">
+                <button id="btn-prev" onclick="prevCard()">&lt;</button>
+                <span id="progress-text">1 / 5</span>
+                <button id="btn-next" onclick="nextCard()">&gt;</button>
+            </div>
+
+            <div id="action-buttons">
+                <button id="btn-unlearned" onclick="markAsUnlearned()">Repasar 🤔</button>
+                <button id="btn-learned" onclick="markAsLearned()">Aprendida 🎉</button>
+            </div>
+
+            <div class="controls" style="margin-top: 40px;">
+                <button onclick="showDashboard()">Volver a Categorías</button>
+            </div>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
