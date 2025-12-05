@@ -451,7 +451,40 @@ const trackingStatusBar = document.getElementById('tracking-status-bar');
 const languageToggleButton = document.getElementById('btn-language-toggle');
 
 
-// --- 3. FUNCIONES DE LÓGICA ---
+// --- 3. FUNCIONES DE LÓGICA Y ALMACENAMIENTO ---
+
+/** Guarda el estado actual de todos los mazos en localStorage. */
+function saveDecks() {
+    // Almacena solo la data esencial, no las funciones ni los elementos del DOM.
+    // Usamos JSON.stringify para convertir el array de objetos JavaScript a texto (string).
+    try {
+        localStorage.setItem('aptisFlashcardDecks', JSON.stringify(initialDecks));
+        // console.log("Datos guardados exitosamente en localStorage."); // Descomentar para debug
+    } catch (e) {
+        console.error("Error al guardar en localStorage:", e);
+    }
+}
+
+/** Carga el estado de los mazos desde localStorage si existe. */
+function loadDecks() {
+    try {
+        const storedDecks = localStorage.getItem('aptisFlashcardDecks');
+        if (storedDecks) {
+            // Usamos JSON.parse para convertir el texto almacenado de vuelta a objetos JavaScript.
+            const loadedData = JSON.parse(storedDecks);
+            
+            // Reemplazar los datos iniciales con los datos guardados.
+            // Esto asegura que la aplicación se inicie con el progreso del usuario.
+            initialDecks.splice(0, initialDecks.length, ...loadedData); 
+            // console.log("Datos cargados desde localStorage."); // Descomentar para debug
+            return true; 
+        }
+    } catch (e) {
+        console.error("Error al cargar o parsear datos de localStorage:", e);
+    }
+    return false; 
+}
+
 
 /** Renderiza la lista de mazos en la pantalla inicial (Dashboard) */
 function renderDashboard() {
@@ -538,7 +571,6 @@ function updateTrackingStatus() {
  */
 function selectAnswer(selectedElement) {
     // 1. Encontrar el contenedor principal de las opciones del quiz actual (card-front-text)
-    // Esto asegura que solo deselecciona dentro de la tarjeta actual
     const optionsContainer = selectedElement.closest('#card-front-text'); 
     
     // Si no encuentra el contenedor, salimos para evitar errores
@@ -707,6 +739,7 @@ function markAsLearned() {
     if (currentDeck && currentDeck.cards[currentCardIndex]) {
         currentDeck.cards[currentCardIndex].status = 'learned';
         updateTrackingStatus();
+        saveDecks(); // 🔄 GUARDADO DE PROGRESO
         nextCard();
     }
 }
@@ -716,6 +749,7 @@ function markAsUnlearned() {
     if (currentDeck && currentDeck.cards[currentCardIndex]) {
         currentDeck.cards[currentCardIndex].status = 'unlearned';
         updateTrackingStatus();
+        saveDecks(); // 🔄 GUARDADO DE PROGRESO
         nextCard();
     }
 }
@@ -748,6 +782,9 @@ function toggleLanguageOrder() {
 
 /** Inicialización de la aplicación */
 function init() {
+    // 1. INTENTAR CARGAR DATOS GUARDADOS
+    loadDecks(); 
+
     // Añadir el Event Listener para el botón de idioma 
     if (languageToggleButton) {
         languageToggleButton.addEventListener('click', toggleLanguageOrder);
@@ -766,6 +803,10 @@ document.addEventListener('keydown', (e) => {
         if (e.key === ' ' || e.key === 'Enter') flipCard();
     }
 });
+
+// Guardado de seguridad cuando el usuario intenta cerrar o recargar la página
+window.addEventListener('beforeunload', saveDecks);
+
 
 // Iniciar la app al cargar el script
 init();
