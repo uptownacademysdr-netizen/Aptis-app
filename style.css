@@ -294,7 +294,7 @@ button:disabled {
     
     #app-title {
         /* Reduce el tamaño de la fuente para pantallas pequeñas */
-        font-size: 1.2em; /* Puedes ajustarlo: 1.2em, 1.1em, etc. */
+        font-size: 0.9em; /* Puedes ajustarlo: 1.2em, 1.1em, etc. */
         padding: 10px 15px; /* Ajusta el padding para que no se vea tan grande */
         text-align: center; /* Centra el texto si queda espacio */
     }
@@ -304,3 +304,4 @@ button:disabled {
         font-size: 0.9em;
     }
 }
+
